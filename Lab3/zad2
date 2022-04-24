@@ -1,0 +1,47 @@
+package com.company;
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class Main {
+
+    public static void main(String[] args) {
+        zadanie2();
+    }
+
+
+    public static double wczytaj() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Podaj liczbe: ");
+        double n = input.nextDouble();
+
+        return n;
+
+    }
+
+    public static void zadanie2() {
+        int iled=0, ileu=0;
+        double sumad=0, sumau=0, liczba;
+
+        for(int i=0; i<3; i++){
+            liczba = wczytaj();
+
+            if(liczba>=0){
+                iled++;sumad+=liczba;
+            }else{
+                ileu++;sumau+=liczba;
+
+            }
+        }
+
+        //System.out.println(wczytaj());
+
+        System.out.println("Ilość liczb dodatnich "+iled+", suma"+sumad);
+        System.out.println("Ilość liczb ujemnych "+ileu+", suma"+sumau);
+
+
+    }
+
+
+
+}
