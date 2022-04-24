@@ -1,0 +1,12 @@
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+        int wiek = 20;
+        String imie = "Klaudia";
+
+        System.out.println("Nazywam sie "+imie+" i mam "+wiek+" lat.");
+
+    }
+}
