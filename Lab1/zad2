@@ -1,0 +1,30 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int a;
+        int b;
+
+        System.out.println("Podaj wartosc a ");
+        a = in.nextInt();
+        System.out.println("Liczba a = "+a);
+
+        System.out.println("Podaj wartosc b ");
+        b = in.nextInt();
+        System.out.println("Liczba b = "+b);
+
+        int suma = a + b;
+        System.out.println("Suma = "+ suma);
+
+        int roznica = a - b;
+        System.out.println("Roznica = "+ roznica);
+
+        int iloczyn = a * b;
+        System.out.println("Iloczyn = "+ iloczyn);
+
+    }
+}
