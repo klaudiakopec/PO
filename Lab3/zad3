@@ -1,0 +1,42 @@
+package com.company;
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class Main {
+
+    public static void main(String[] args) {
+        zadanie3();
+    }
+
+
+    public static double wczytaj() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Podaj liczbe: ");
+        double n = input.nextDouble();
+
+        return n;
+
+    }
+    
+
+    public static void zadanie3() {
+        int iled=0, ileu=0;
+        double suma=0, liczba;
+        double n = wczytaj();
+        if(n>0){
+            for(int i=0; i<n; i++){
+                liczba = wczytaj();
+                if(liczba%2==0) suma+=liczba;
+
+            }
+            System.out.println("Ilość liczb parzystych "+suma);
+
+        }
+        System.out.println("Podano bledne dane");
+
+
+    }
+
+
+}
