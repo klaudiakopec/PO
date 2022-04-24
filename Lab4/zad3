@@ -1,0 +1,51 @@
+package com.company;
+
+import java.sql.Statement;
+import java.util.Arrays;
+
+public class Main {
+
+    public static void main(String[] args) {
+        zad3();
+        losuj();
+
+    }
+
+    public static double losuj() {
+        Random rand = new Random();
+        double liczba = rand.nextInt(45)-10;
+        return liczba;
+
+    }
+
+    public static void zad3() {
+
+        //double [] tablica ={43.5765,34.7645,23.67,56.2,6.43};
+        double [] array = new double[20];
+        double suma= 0;
+        double sumaRoznic =0;
+        double srednia;
+
+
+        System.out.println("Elementy tablicy: ");
+        for(int i = 0;i<array.length;i++){
+            array[i]= losuj();
+            suma+=array[i];
+            System.out.print(array[i]+"\t");
+
+        }
+        srednia = suma/(double)array.length;
+        System.out.println("\n Suma: " +suma +" \n srednia "+srednia);
+
+        for(int i =0; i<array.length; i++){
+            sumaRoznic+=(array[i]-srednia)*(array[i]-srednia);
+        }
+
+        System.out.println("suma roznic "+sumaRoznic);
+        System.out.println("wariancja: "+sumaRoznic/(double)((array.length)-1));
+
+        //war=suma(pierwszy pom- średnia pom)^2/liczba pomiarów -1
+
+    }
+
+}
