@@ -1,0 +1,43 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        zad1(5,7,8);
+
+    }
+
+    public static void zad1(double a, double b, double c) {
+        if(a!=0){
+            double delta = (b*b)-4*a*c;
+            if(delta==0){
+                double x1 = -b/(2*a);
+                System.out.println("Rownanie posiada jedno rozwiazanie x1 = "+x1);
+            }else if(delta>0){
+                double x2 = (-b+Math.sqrt(delta))/(2*a);
+                double x3 = (-b-Math.sqrt(delta))/(2*a);
+                System.out.println("Rownanie posiada dwa rozwiazania x1 = "+x2+ " x2= "+x3);
+            }
+            else System.out.println("Delta wyszla ujemna");
+        }
+        else{
+            System.out.println("To nie jest rownanie kwadratowe, a liniowe!");
+            liniowe(b,c);
+        }
+
+    }
+
+    public static void liniowe(double b, double c) {
+
+        if(b==0){
+            if(c==0) System.out.println("Rownanie tozsamosciowe");
+            else System.out.println("Rownanie sprzeczne");
+        }else{
+            double x = -c/(2*b);
+            System.out.println("Rowanie liniowe x= "+x);
+        }
+
+    }
+}
