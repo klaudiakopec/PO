@@ -1,0 +1,48 @@
+package com.company;
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class Main {
+
+    public static void main(String[] args) {
+        zadanie1();
+    }
+
+    public static void zadanie1() {
+        int n;
+        double pkt, suma=0, ile=0;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Podaj ilosc studentow w grupie ");
+        n = input.nextInt();
+
+        if(n>0){
+            while(n>0){
+                System.out.println("Podaj lp. pkt 0-50:");
+                pkt = input.nextDouble();
+
+                if(pkt>=0 && pkt<=50){
+                    suma+=pkt;
+                    ile++;
+                    n--;
+                }
+                continue;
+            }
+            System.out.println("suma pkt " + suma);
+            System.out.println("srednia " + (suma/ile));
+        }
+        else System.out.println("W grupie musi byc conajmniej 1 student");
+
+    }
+
+    public static double wczytaj() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Podaj liczbe: ");
+        double n = input.nextDouble();
+
+        return n;
+
+    }
+
+
+}
