@@ -1,0 +1,51 @@
+package com.company;
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class Main {
+
+    public static void main(String[] args) {
+        zadanie5();
+
+    }
+
+
+
+    public static double wczytaj() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Podaj liczbe: ");
+        double n = input.nextDouble();
+
+        return n;
+
+    }
+
+
+    public static void zadanie5() {
+        System.out.println(palindron("ala"));
+        System.out.println(palindron("kajak"));
+        System.out.println(palindron("123321"));
+
+
+
+    }
+
+    public static boolean palindron(String tekst) {
+        for(int i=0; i< tekst.length()/2;i++){
+            char znak = tekst.charAt(i);
+            char przeciwnyznak = tekst.charAt(tekst.length()-1-i);
+
+            if (znak !=przeciwnyznak) return false;
+
+        }
+        return true;
+
+    }
+
+    public static boolean palindron(long liczba) {
+        return palindron(Long.toString(liczba));
+
+    }
+
+}
