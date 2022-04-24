@@ -1,0 +1,47 @@
+package com.company;
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class Main {
+
+    public static void main(String[] args) {
+        zadanie4();
+
+    }
+
+
+    public static double wczytaj() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Podaj liczbe: ");
+        double n = input.nextDouble();
+
+        return n;
+
+    }
+
+
+    public static void zadanie4() {
+
+        Random rand = new Random();
+        int los;
+        double suma;
+        double n = wczytaj();
+        for(int i=0; i<n; i++) {
+            los = rand.nextInt(56) - 10;
+            System.out.println(los);
+            for(suma=0;suma<i;suma++){
+                suma+=los;
+                System.out.println("Suma wylosowanych liczba to: "+suma);
+            }
+
+
+
+        }
+        // los = rand.nextInt(56)-10;
+        //System.out.println(los);
+
+
+    }
+    
+}
