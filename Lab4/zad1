@@ -1,0 +1,44 @@
+package com.company;
+
+import java.sql.Statement;
+import java.util.Arrays;
+
+public class Main {
+
+    public static void main(String[] args) {
+        zad1();
+    }
+
+    public static void zad1() {
+
+        //Napisz program obliczający sumę i średnią elementów tablicy z użyciem pętli for oraz for each.
+
+        int [] tab1 = {5,3,78,26,89,233,78};
+        int [] tab2 = {35,687,12,768,34,88,6};
+
+        for(int i=0; i<tab1.length; i++){
+            //System.out.println(tab1[i]);
+            //i=i+1;
+            System.out.println(i);
+            for(int j=0; j<tab2.length; j++){
+                //System.out.println(tab2[j]);
+                System.out.println("suma: "+(tab1[i]+tab2[j]));
+                //System.out.println("suma: "+(tab1[i]+tab2[j]));
+
+            }
+        }
+
+        for(int i=0; i<tab1.length; i++){
+            //System.out.println(tab1[i]);
+            for(int j=0; j<tab2.length; j++){
+                //System.out.println(tab2[j]);
+                System.out.println("srednia: "+((tab1[i]+tab2[j])/2));
+            }
+        }
+
+        //System.out.println("suma: "+(tab1[i]+tab2[i]));
+
+    }
+
+
+}
