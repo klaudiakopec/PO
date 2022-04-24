@@ -1,0 +1,22 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        zad1(5,7,8);
+    }
+
+    public static void zad1(double a, double b, double c) {
+        if(a>b && a>c && b>c) System.out.println("Wynik od min do max: "+c+", "+b+", "+a);
+        else if(b>a && b>c && a>c) System.out.println("Wynik od min do max: "+c+", "+a+", "+b);
+        else if(c>b && c>a && b>a) System.out.println("Wynik od min do max: "+a+", "+b+", "+c);
+        else if(c>b && c>a && a>b) System.out.println("Wynik od min do max: "+b+", "+a+", "+c);
+
+
+
+    }
+
+
+}
